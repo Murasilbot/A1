@@ -21,10 +21,3 @@ Church of the Nativity - Bethlehem
 الله يبارككم ويحفظكم.
 الأب يوسف حبش
 كنيسة المهد - بيت لحم
----
-PRIVACY REVIEW REQUIRED:
-- Private phone number (02-274-1234) provided for Sister Mary. 
-- Name of Sister Mary associated with a specific role and contact number.
-VERIFICATION NEEDED:
-- Confirm the exact date of "next Sunday" relative to the publication date.
-- Confirm the specific date for "the end of the month" regarding scholarship deadlines.
