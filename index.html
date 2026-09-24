@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parish Updates / تحديثات الرعية</title>
+    <title>Corpus Christi – Sister Parish Update</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
         :root {
             --gold: #c9a84c;
             --gold-light: #dfc87a;
@@ -26,113 +28,128 @@
             line-height: 1.7;
         }
 
+        body.ar {
+            direction: rtl;
+            font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+        }
+
+        /* ── Header ── */
         header {
             background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine) 100%);
             color: var(--cream);
             text-align: center;
-            padding: 2.5rem 1rem 2rem;
+            padding: 2.2rem 1rem 1.8rem;
             border-bottom: 4px solid var(--gold);
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.04em;
-            margin-bottom: 0.2rem;
-        }
-
-        header .subtitle {
-            font-size: 1.4rem;
-            font-family: 'Scheherazade New', 'Traditional Arabic', 'Amiri', serif;
-            color: var(--gold-light);
-            direction: rtl;
         }
 
         header .cross {
             font-size: 1.6rem;
             color: var(--gold);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
+        header h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.15rem;
+        }
+
+        header .subtitle {
+            font-size: 1rem;
+            color: var(--gold-light);
+            margin-top: 0.1rem;
+        }
+
+        /* ── Language toggle ── */
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            background: var(--sand);
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .lang-toggle button {
+            font-family: inherit;
+            font-size: 0.88rem;
+            padding: 0.6rem 2rem;
+            border: none;
+            background: transparent;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .lang-toggle button:hover {
+            background: rgba(0,0,0,0.04);
+        }
+
+        .lang-toggle button.active {
+            color: var(--wine);
+            font-weight: 700;
+            border-bottom-color: var(--gold);
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* ── Container ── */
         .container {
             max-width: 780px;
             margin: 0 auto;
             padding: 2rem 1.5rem 4rem;
         }
 
+        /* ── Update cards ── */
         .update-card {
             background: #fff;
             border: 1px solid var(--divider);
             border-radius: 6px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .update-card .card-header {
+        .card-header {
             background: var(--sand);
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.25rem;
             border-bottom: 1px solid var(--divider);
             display: flex;
-            justify-content: space-between;
             align-items: baseline;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 1rem;
         }
 
-        .update-card .card-title {
-            font-size: 1.15rem;
+        .card-date {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
             color: var(--wine);
             font-weight: 700;
         }
 
-        .update-card .card-date {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            white-space: nowrap;
-        }
-
-        .lang-section {
+        .card-body {
             padding: 1.25rem 1.5rem;
         }
 
-        .lang-section + .lang-section {
-            border-top: 1px solid var(--divider);
-        }
-
-        .lang-label {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gold);
-            background: var(--wine);
-            padding: 0.15rem 0.6rem;
-            border-radius: 3px;
-            margin-bottom: 0.75rem;
-        }
-
-        .lang-section p {
+        .card-body p {
             margin-bottom: 0.8rem;
         }
 
-        .lang-section p:last-child {
+        .card-body p:last-child {
             margin-bottom: 0;
         }
 
-        .arabic {
+        .card-body.arabic-text {
             direction: rtl;
             text-align: right;
-            font-family: 'Scheherazade New', 'Traditional Arabic', 'Amiri', 'Noto Naskh Arabic', serif;
+            font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
             font-size: 1.08rem;
             line-height: 2;
-        }
-
-        .arabic .lang-label {
-            float: right;
-            margin-left: 0;
-            margin-right: 0;
         }
 
         .signature {
@@ -141,10 +158,11 @@
             color: var(--text-light);
         }
 
-        .arabic .signature {
+        .arabic-text .signature {
             font-style: normal;
         }
 
+        /* ── Footer ── */
         footer {
             text-align: center;
             padding: 1.5rem;
@@ -167,46 +185,69 @@
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.4rem; }
-            header .subtitle { font-size: 1.15rem; }
-            .lang-section { padding: 1rem; }
+            header h1 { font-size: 1.3rem; }
+            header .subtitle { font-size: 0.88rem; }
+            .card-body { padding: 1rem; }
             .container { padding: 1rem 0.75rem 3rem; }
+            .lang-toggle button { padding: 0.5rem 1.2rem; font-size: 0.82rem; }
+            .card-header { flex-direction: column; gap: 0.2rem; }
         }
-
-        /* Google Font import for Arabic */
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
     </style>
 </head>
 <body>
 
 <header>
     <div class="cross">☦</div>
-    <h1>Parish Partnership Updates</h1>
-    <div class="subtitle">تحديثات شراكة الرعية</div>
+    <h1 id="hdr-title">Corpus Christi – Sandwich, MA<br>Sister Parish Update</h1>
+    <div class="subtitle" id="hdr-sub">with Church of the Annunciation – Ein Arik – West Bank</div>
 </header>
+
+<nav class="lang-toggle" id="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-ar" onclick="setLang('ar')">العربية</button>
+</nav>
 
 <div class="container" id="updates-container">
     <div class="loading">Loading updates…</div>
 </div>
 
-<footer>
-    Parish Partnership Communications · Managed by Murasil (مراسل)
+<footer id="footer">
+    Corpus Christi – Sandwich, MA · Sister Parish Communications
 </footer>
 
 <script>
-/**
- * Fetches Markdown files from the updates/ directory,
- * parses YAML frontmatter + bilingual content,
- * renders them as update cards.
- *
- * Works on GitHub Pages with no build step — pure client-side.
- * Relies on a manifest file (updates/manifest.json) listing articles,
- * since GitHub Pages doesn't support directory listing.
- */
-
 const UPDATES_DIR = 'updates/';
 const MANIFEST = UPDATES_DIR + 'manifest.json';
 
+let currentLang = 'en';
+let loadedUpdates = [];  // cache parsed updates
+
+/* ── Language switching ── */
+function setLang(lang) {
+    currentLang = lang;
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.body.classList.toggle('ar', lang === 'ar');
+
+    // Swap header
+    const title = document.getElementById('hdr-title');
+    const sub = document.getElementById('hdr-sub');
+    const footer = document.getElementById('footer');
+
+    if (lang === 'ar') {
+        title.innerHTML = 'كنيسة البشارة – عين عريك – الضفة الغربية<br>تحديثات شراكة الرعية';
+        sub.textContent = 'مع كنيسة جسد المسيح – ساندويتش، ماساتشوستس';
+        footer.textContent = 'كنيسة البشارة – عين عريك · اتصالات شراكة الرعية';
+    } else {
+        title.innerHTML = 'Corpus Christi – Sandwich, MA<br>Sister Parish Update';
+        sub.textContent = 'with Church of the Annunciation – Ein Arik – West Bank';
+        footer.textContent = 'Corpus Christi – Sandwich, MA · Sister Parish Communications';
+    }
+
+    renderAll();
+}
+
+/* ── Load & parse ── */
 async function loadUpdates() {
     const container = document.getElementById('updates-container');
 
@@ -216,103 +257,88 @@ async function loadUpdates() {
         const manifest = await resp.json();
 
         if (!manifest.length) {
-            container.innerHTML = '<div class="no-updates">No updates yet. Check back soon.</div>';
+            container.innerHTML = '<div class="no-updates">No updates yet.</div>';
             return;
         }
 
-        // Sort newest first
         manifest.sort((a, b) => b.date.localeCompare(a.date));
 
-        let html = '';
         for (const entry of manifest) {
             const mdResp = await fetch(UPDATES_DIR + entry.file);
             if (!mdResp.ok) continue;
             const mdText = await mdResp.text();
             const parsed = parseUpdate(mdText);
-            if (!parsed) continue;
-
-            html += renderCard(parsed, entry.date);
+            if (parsed) loadedUpdates.push(parsed);
         }
 
-        container.innerHTML = html || '<div class="no-updates">No updates to display.</div>';
+        renderAll();
 
     } catch (e) {
-        // Fallback: try fetching known files if manifest doesn't exist
         container.innerHTML = '<div class="no-updates">Updates will appear here once published.</div>';
-        console.log('Manifest not found, static fallback.', e);
+        console.error(e);
     }
 }
 
+function renderAll() {
+    const container = document.getElementById('updates-container');
+    if (!loadedUpdates.length) {
+        container.innerHTML = '<div class="no-updates">No updates yet.</div>';
+        return;
+    }
+    container.innerHTML = loadedUpdates.map(u => renderCard(u)).join('');
+}
+
+/* ── Markdown parser ── */
 function parseUpdate(mdText) {
-    // Strip YAML frontmatter
     const fmMatch = mdText.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
     if (!fmMatch) return null;
 
     const frontmatter = {};
     fmMatch[1].split('\n').forEach(line => {
         const [key, ...rest] = line.split(':');
-        if (key && rest.length) {
+        if (key && rest.length)
             frontmatter[key.trim()] = rest.join(':').trim().replace(/^["']|["']$/g, '');
-        }
     });
 
     const body = fmMatch[2].trim();
 
-    // Split into English and Arabic sections
-    // Look for patterns like "ENGLISH:" / "العربي:" or "---" separators
-    let english = '';
-    let arabic = '';
-    let signature_en = '';
-    let signature_ar = '';
+    let english = '', arabic = '', signature_en = '', signature_ar = '';
 
-    // Try to split by the Arabic section marker
     const arabicMarkers = ['العربي:', 'العربية:', 'ARABIC:', 'Arabic:'];
-    let splitIdx = -1;
-    let markerLen = 0;
-
-    for (const marker of arabicMarkers) {
-        const idx = body.indexOf(marker);
-        if (idx > -1) {
-            splitIdx = idx;
-            markerLen = marker.length;
-            break;
-        }
+    let splitIdx = -1, markerLen = 0;
+    for (const m of arabicMarkers) {
+        const i = body.indexOf(m);
+        if (i > -1) { splitIdx = i; markerLen = m.length; break; }
     }
 
     if (splitIdx > -1) {
         let enPart = body.substring(0, splitIdx).trim();
         let arPart = body.substring(splitIdx + markerLen).trim();
 
-        // Remove "ENGLISH:" label if present
         enPart = enPart.replace(/^(?:PARISH UPDATE.*?\n)?(?:ENGLISH:\n?)/i, '').trim();
-        // Remove leading/trailing --- separators
         enPart = enPart.replace(/^---\s*$/gm, '').trim();
         arPart = arPart.replace(/^---\s*$/gm, '').trim();
 
-        // Strip PRIVACY REVIEW and VERIFICATION sections from public display
-        arPart = arPart.replace(/\n?PRIVACY REVIEW REQUIRED:[\s\S]*$/i, '').trim();
+        // Strip privacy/verification flags
         enPart = enPart.replace(/\n?PRIVACY REVIEW REQUIRED:[\s\S]*$/i, '').trim();
+        arPart = arPart.replace(/\n?PRIVACY REVIEW REQUIRED:[\s\S]*$/i, '').trim();
+        enPart = enPart.replace(/\n?VERIFICATION NEEDED:[\s\S]*$/i, '').trim();
+        arPart = arPart.replace(/\n?VERIFICATION NEEDED:[\s\S]*$/i, '').trim();
 
-        // Extract signatures (last lines that look like a name + location)
+        // English signature
         const enLines = enPart.split('\n');
-        const arLines = arPart.split('\n');
-
-        // English signature: last 2 lines if they look like name + church
         if (enLines.length >= 2) {
             const last = enLines[enLines.length - 1].trim();
             const prev = enLines[enLines.length - 2].trim();
-            if (last.match(/church|parish|bethlehem|jerusalem/i) ||
-                prev.match(/^father|^fr\.|^deacon|^sister|^brother|^bishop/i)) {
+            if (last.match(/church|parish|bethlehem|jerusalem|nativity/i) ||
+                prev.match(/^father|^fr\.|^deacon|^sister|^brother|^bishop|^monsignor/i)) {
                 signature_en = prev + '\n' + last;
                 english = enLines.slice(0, -2).join('\n').trim();
-            } else {
-                english = enPart;
-            }
-        } else {
-            english = enPart;
-        }
+            } else { english = enPart; }
+        } else { english = enPart; }
 
-        // Arabic signature: last 2 lines
+        // Arabic signature
+        const arLines = arPart.split('\n');
         if (arLines.length >= 2) {
             const last = arLines[arLines.length - 1].trim();
             const prev = arLines[arLines.length - 2].trim();
@@ -320,53 +346,42 @@ function parseUpdate(mdText) {
                 prev.match(/^الأب|^الشماس|^الأخت|^المطران/)) {
                 signature_ar = prev + '\n' + last;
                 arabic = arLines.slice(0, -2).join('\n').trim();
-            } else {
-                arabic = arPart;
-            }
-        } else {
-            arabic = arPart;
-        }
+            } else { arabic = arPart; }
+        } else { arabic = arPart; }
     } else {
-        // No clear split — show everything as English
         english = body.replace(/\n?PRIVACY REVIEW REQUIRED:[\s\S]*$/i, '').trim();
     }
 
     return {
         title: frontmatter.title || 'Parish Update',
         date: frontmatter.date || '',
-        english,
-        arabic,
-        signature_en,
-        signature_ar
+        english, arabic, signature_en, signature_ar
     };
 }
 
-function renderCard(parsed, date) {
-    const dateStr = formatDate(date || parsed.date);
+/* ── Render ── */
+function renderCard(parsed) {
+    const dateStr = formatDate(parsed.date);
+    const isAr = currentLang === 'ar';
 
-    let enHtml = escapeHtml(parsed.english).replace(/\n/g, '</p><p>');
-    let arHtml = escapeHtml(parsed.arabic).replace(/\n/g, '</p><p>');
-    let sigEn = parsed.signature_en ? '<div class="signature">' + escapeHtml(parsed.signature_en).replace(/\n/g, '<br>') + '</div>' : '';
-    let sigAr = parsed.signature_ar ? '<div class="signature">' + escapeHtml(parsed.signature_ar).replace(/\n/g, '<br>') + '</div>' : '';
+    const content = isAr ? parsed.arabic : parsed.english;
+    const sig     = isAr ? parsed.signature_ar : parsed.signature_en;
+
+    if (!content) return '';
+
+    const bodyHtml = escapeHtml(content).replace(/\n/g, '</p><p>');
+    const sigHtml  = sig ? '<div class="signature">' + escapeHtml(sig).replace(/\n/g, '<br>') + '</div>' : '';
 
     return `
     <article class="update-card">
         <div class="card-header">
-            <span class="card-title">${escapeHtml(parsed.title)}</span>
             <span class="card-date">${dateStr}</span>
+            <span class="card-title">${escapeHtml(parsed.title)}</span>
         </div>
-        ${parsed.english ? `
-        <div class="lang-section">
-            <span class="lang-label">English</span>
-            <p>${enHtml}</p>
-            ${sigEn}
-        </div>` : ''}
-        ${parsed.arabic ? `
-        <div class="lang-section arabic">
-            <span class="lang-label">العربية</span>
-            <p>${arHtml}</p>
-            ${sigAr}
-        </div>` : ''}
+        <div class="card-body${isAr ? ' arabic-text' : ''}">
+            <p>${bodyHtml}</p>
+            ${sigHtml}
+        </div>
     </article>`;
 }
 
@@ -374,16 +389,15 @@ function formatDate(dateStr) {
     if (!dateStr) return '';
     try {
         const d = new Date(dateStr + 'T00:00:00');
-        return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    } catch {
-        return dateStr;
-    }
+        return d.toLocaleDateString(currentLang === 'ar' ? 'ar-u-nu-latn' : 'en-US',
+            { year: 'numeric', month: 'long', day: 'numeric' });
+    } catch { return dateStr; }
 }
 
 function escapeHtml(s) {
-    const div = document.createElement('div');
-    div.textContent = s;
-    return div.innerHTML;
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
 }
 
 loadUpdates();
