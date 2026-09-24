@@ -225,7 +225,7 @@ async function loadUpdates() {
 
         let html = '';
         for (const entry of manifest) {
-            const mdResp = await fetch(UPDATES_DIR + entry.file);
+            const mdResp = await fetch(UPDATES_DIR + encodeURIComponent(entry.file));
             if (!mdResp.ok) continue;
             const mdText = await mdResp.text();
             const parsed = parseUpdate(mdText);
