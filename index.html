@@ -35,17 +35,57 @@
 
         /* ── Header ── */
         header {
-            background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine) 100%);
+            position: relative;
             color: var(--cream);
             text-align: center;
             padding: 2.2rem 1rem 1.8rem;
             border-bottom: 4px solid var(--gold);
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 50%;
+            height: 100%;
+            background: url('corpus-christi.webp') center/cover no-repeat;
+            opacity: 0.45;
+            z-index: 0;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('ein-arik.webp') center/cover no-repeat;
+            opacity: 0.45;
+            z-index: 0;
+        }
+
+        header > * {
+            position: relative;
+            z-index: 1;
         }
 
         header .cross {
-            font-size: 1.6rem;
-            color: var(--gold);
             margin-bottom: 0.4rem;
+        }
+
+        header .cross img {
+            height: 2.2rem;
+            width: auto;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+        }
+
+        /* Dark overlay so text is readable over background photos */
+        .header-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(74, 26, 38, 0.65);
+            z-index: 0;
         }
 
         header h1 {
@@ -53,12 +93,14 @@
             font-weight: 400;
             letter-spacing: 0.03em;
             margin-bottom: 0.15rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
         }
 
         header .subtitle {
             font-size: 1rem;
             color: var(--gold-light);
             margin-top: 0.1rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
         /* ── Language toggle ── */
@@ -212,7 +254,8 @@
 <body>
 
 <header>
-    <div class="cross">☦</div>
+    <div class="header-overlay"></div>
+    <div class="cross"><img src="jerusalem-cross.webp" alt="Jerusalem Cross"></div>
     <h1 id="hdr-title">Corpus Christi – Sandwich, MA<br>Sister Parish Update</h1>
     <div class="subtitle" id="hdr-sub">with Church of the Annunciation – Ein Arik – West Bank</div>
 </header>
