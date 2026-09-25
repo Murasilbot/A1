@@ -98,8 +98,16 @@
 
         header .subtitle {
             font-size: 1rem;
-            color: var(--gold-light);
+            color: var(--cream);
             margin-top: 0.1rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        header .sister-label {
+            font-size: 0.92rem;
+            color: var(--gold-light);
+            margin-top: 0.3rem;
+            font-style: italic;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
@@ -256,8 +264,9 @@
 <header>
     <div class="header-overlay"></div>
     <div class="cross"><img src="jerusalem-cross.webp" alt="Jerusalem Cross"></div>
-    <h1 id="hdr-title">Corpus Christi – Sandwich, MA<br>Sister Parish Update</h1>
+    <h1 id="hdr-title">Corpus Christi – Sandwich, MA</h1>
     <div class="subtitle" id="hdr-sub">with Church of the Annunciation – Ein Arik – West Bank</div>
+    <div class="sister-label" id="hdr-sister">Sister Parish Update</div>
 </header>
 
 <nav class="lang-toggle" id="lang-toggle">
@@ -290,15 +299,18 @@ function setLang(lang) {
     // Swap header
     const title = document.getElementById('hdr-title');
     const sub = document.getElementById('hdr-sub');
+    const sister = document.getElementById('hdr-sister');
     const footer = document.getElementById('footer');
 
     if (lang === 'ar') {
-        title.innerHTML = 'كنيسة البشارة – عين عريك – الضفة الغربية<br>تحديثات شراكة الرعية';
+        title.innerHTML = 'كنيسة البشارة – عين عريك – الضفة الغربية';
         sub.textContent = 'مع كنيسة جسد المسيح – ساندويتش، ماساتشوستس';
+        sister.textContent = 'تحديثات شراكة الرعية';
         footer.textContent = 'كنيسة البشارة – عين عريك · اتصالات شراكة الرعية';
     } else {
-        title.innerHTML = 'Corpus Christi – Sandwich, MA<br>Sister Parish Update';
+        title.innerHTML = 'Corpus Christi – Sandwich, MA';
         sub.textContent = 'with Church of the Annunciation – Ein Arik – West Bank';
+        sister.textContent = 'Sister Parish Update';
         footer.textContent = 'Corpus Christi – Sandwich, MA · Sister Parish Communications';
     }
 
