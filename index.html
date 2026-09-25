@@ -171,6 +171,21 @@
             border-top: 1px solid var(--divider);
         }
 
+        .card-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 0.6rem 0;
+            display: block;
+        }
+
+        .card-body a[href*="image"], .card-body a[href$=".jpg"],
+        .card-body a[href$=".jpeg"], .card-body a[href$=".png"],
+        .card-body a[href$=".webp"], .card-body a[href$=".gif"] {
+            color: var(--wine);
+            text-decoration: underline;
+        }
+
         .no-updates {
             text-align: center;
             padding: 3rem 1rem;
@@ -359,6 +374,53 @@ function parseUpdate(mdText) {
     };
 }
 
+/* ── Render markdown subset (images, links, paragraphs) ── */
+function renderMarkdown(text) {
+    // Process line by line
+    const lines = text.split('\n');
+    let html = '';
+    let inParagraph = false;
+
+    for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) {
+            if (inParagraph) { html += '</p>'; inParagraph = false; }
+            continue;
+        }
+
+        // Process inline markdown
+        let processed = escapeHtml(trimmed);
+
+        // Images: ![alt](url)
+        processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
+            return `<img src="${src}" alt="${alt}" loading="lazy">`;
+        });
+
+        // Links: [text](url)
+        processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) => {
+            return `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
+        });
+
+        // Standalone image URLs (bare URLs ending in image extensions)
+        processed = processed.replace(
+            /(?<!["\(])https?:\/\/[^\s<>"']+\.(?:jpg|jpeg|png|gif|webp)(?:\?[^\s<>"']*)?/gi,
+            url => `<a href="${url}" target="_blank" rel="noopener">📷 View image</a>`
+        );
+
+        // Check if line is just an image (no wrapping <p>)
+        if (processed.startsWith('<img ')) {
+            if (inParagraph) { html += '</p>'; inParagraph = false; }
+            html += processed;
+        } else {
+            if (!inParagraph) { html += '<p>'; inParagraph = true; }
+            else { html += '<br>'; }
+            html += processed;
+        }
+    }
+    if (inParagraph) html += '</p>';
+    return html;
+}
+
 /* ── Render ── */
 function renderCard(parsed) {
     const dateStr = formatDate(parsed.date);
@@ -369,7 +431,7 @@ function renderCard(parsed) {
 
     if (!content) return '';
 
-    const bodyHtml = escapeHtml(content).replace(/\n/g, '</p><p>');
+    const bodyHtml = renderMarkdown(content);
     const sigHtml  = sig ? '<div class="signature">' + escapeHtml(sig).replace(/\n/g, '<br>') + '</div>' : '';
 
     return `
