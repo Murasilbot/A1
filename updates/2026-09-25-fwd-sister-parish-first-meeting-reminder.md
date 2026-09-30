@@ -1,0 +1,31 @@
+---
+title: "Fwd: Sister Parish First Meeting Reminder"
+date: 2026-09-25
+submission_id: 20260925_165411_Fwd_Sister_Parish_First_Meeting_Reminder
+published_at: 2026-09-30T14:38:47.773545---
+
+**PARISH UPDATE**
+
+The parish partnership team is excited to announce the upcoming first meeting for our sister parish relationship with the Ein Arik Parish in the West Bank, just north of Jerusalem. Father Jack has been working closely with Fr. Firas Abedrabbo, the parish priest of Ein Arik, to establish this relationship, which aims to enrich both parishes in faith and charity. The meeting will take place at Corpus Christi Church from 5:30 PM to 6:30 PM on Tuesday, May 12, 2026. We encourage all parishioners to attend and bring your questions, suggestions, and interests to help us develop a plan to grow together in faith and charity.
+
+Some initial ideas that have been discussed include sharing notices about activities in the Ein Arik community in our parish bulletin, creating a display in the parish hall with photos of parish life, students, and the school, and remembering each other in the Prayers of the Faithful. Additionally, we are considering organizing meetings between the youth of both parishes to exchange experiences and challenges of living their faith. In the future, we hope to host a visit from the Ein Arik parish to ours, where we can spend a day together, visiting the area, sharing a meal, celebrating Mass, and getting to know each other personally. We are also exploring the possibility of hosting young people from our parish who would like to spend time at Ein Arik volunteering and discovering the Holy Land.
+
+The Order of the Holy Sepulchre is facilitating this relationship, and we are excited to be part of this initiative to support Christians in the Holy Land. The largest crisis facing Christians in the Holy Land is keeping schools operating, as these schools are the heart of the parish community and provide hope for the future. Many families struggle financially and cannot afford tuition, and when teachers go unpaid for long periods, the schools cannot continue. By supporting Christian education, especially through school scholarships, we can strengthen the presence of the Church in the Holy Land.
+
+Father Youssef announced that three couples from our parish are leading the core team for this initiative: Matthew and Kristin Ward, Jennifer and Peter Schiller, and Jason and Donna Twitchell. They are working to introduce and expand this initiative to others in the parish with an interest, including existing ministries. We have also discussed with Tom Falkowski the possibility of including Ein Arik in our planned pilgrimage, during which we could spend a day together, celebrate Mass, and share a meal.
+
+Fr. Firas Abedrabbo, the parish priest of Ein Arik, expressed his gratitude for our support, saying, "Your desire to begin by supporting Christian education — especially through school scholarships — touches a very real need in our community. Many families here struggle financially, and helping children remain in a Christian educational environment is not only an academic support, but also a way of strengthening the living presence of the Church in the Holy Land. Beyond financial assistance, I deeply appreciate your vision of building a relationship rooted in friendship, solidarity, shared prayer, and mutual support. A true twinning is not only about resources, but about communion — walking together as members of the same Body of Christ.”
+
+---
+
+**تحديث الكنيسة**
+
+فريق شراكة الكنيسة متحمس لإعلان الاجتماع الأول لعلاقتنا الشقيقة مع كنيسة Ein Arik في الضفة الغربية، شمال القدس. لقد عمل الأب يعقوب بشكل وثيق مع الأب فراس Abedrabbo، كاهن كنيسة Ein Arik، لتأسيس هذه العلاقة التي تهدف إلى تعميق الإيمان والمحبة في كلا الكنيستين. الاجتماع سيقام في كنيسة القديس القربان من الساعة 5:30 مساءً حتى الساعة 6:30 مساءً يوم الثلاثاء، 12 مايو 2026. نشجع جميع أعضاء الكنيسة على الحضور والBring أسئلتكم، اقتراحاتكم، وأهتماماتكم لمساعدتنا في وضع خطة للنمو معًا في الإيمان والمحبة.
+
+بعض الأفكار الأولية التي تم مناقشتها تشمل مشاركة إعلانات حول الأنشطة في مجتمع Ein Arik في نشرة كنيستنا، إنشاء عرض في قاعة الكنيسة مع صور لحياة الكنيسة، الطلاب، والمدرسة، وذكر بعضنا البعض في صلوات المؤمنين. نحن نفكر أيضًا في تنظيم اجتماعات بين شباب كلا الكنيستين لتبادل تجاربهم وتحدياتهم في العيش بالإيمان. في المستقبل، نأمل أن نستضيف زيارة من كنيسة Ein Arik إلى كنيستنا، حيث يمكننا قضاء يوم معًا، زيارة المنطقة، مشاركة وجبة، الاحتفال بالقداس، والتعارف شخصيًا. نحن نفكر أيضًا في إمكانية استضافة شباب من كنيستنا الذين يرغبون في قضاء وقت في Ein Arik كمتطوعين واكتشاف الأرض المقدسة.
+
+ال Orden del Santo Sepulcro يسهل هذه العلاقة، ونحن متحمسون للانضمام إلى هذه المبادرة لدعم المسيحيين في الأرض المقدسة. أكبر أزمة تواجه المسيحيين في الأرض المقدسة هي الحفاظ على المدارس، حيث تعتبر هذه المدارس قلب المجتمع الكنيسة وتقدم الأمل للمستقبل. يعاني العديد من العائلات ماليًا ولا يستطيعون تحمل الرسوم الدراسية، وإذا بقي المعلمون بدون راتب لفترة طويلة، لا يمكن للمدارس الاستمرار. من خلال دعم التعليم المسيحي، خاصة من خلال المنح الدراسية، يمكننا تعزيز وجود الكنيسة في الأرض المقدسة.
+
+أعلن الأب يعقوب أن ثلاث زوجات من كنيستنا تقود فريق العمل الرئيسي لهذه المبادرة: ماثيو وكريستين وارد، جينيفر وبيتر شيلر، وجيسون ودونا تويتشيل. هم يعملون على تقديم هذه المبادرة وتوسيعها إلى الآخرين في الكنيسة الذين يهتمون، بما في ذلك ministries الموجودة. نحن نفكر أيضًا في إمكانية تضمين Ein Arik في رحلتنا المخطط لها، خلال التي يمكننا قضاء يوم معًا، الاحتفال بالقداس، ومشاركة وجبة.
+
+قال الأب فراس Abedrabbo، كاهن كنيسة Ein Arik، بامتنان: "رغبتك في البدء بدعم التعليم المسيحي - خاصة من خلال المنح الدراسية - تمس احتياجًا حقيقيًا في مجتمعنا. يعاني العديد من العائلات هنا ماليًا، ومساعدة الأطفال على البقاء في بيئة تعليمية مسيحية ليس فقط دعمًا أكاديميًا، بل أيضًا طريقة لتعزيز وجود الكنيسة في الأرض المقدسة. بالإضافة إلى الدعم المالي، أنا أقدر رؤيتكم لبناء علاقة مبنية على الصداقة، التضامن، الصلاة المشتركة، والدعم المتبادل. علاقات التوأمة ليست فقط عن الموارد، بل عن الاتصال - السير معًا كأعضاء في جسد المسيح الواحد."
