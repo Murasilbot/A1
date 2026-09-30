@@ -2,7 +2,8 @@
 title: "Fwd: Bishop Approval"
 date: 2026-09-25
 submission_id: 20260925_165411_Fwd_Bishop_Approval
-published_at: 2026-09-30T14:22:11.499307---
+published_at: 2026-09-30T14:22:11.499307
+---
 
 **PARISH UPDATE**
 

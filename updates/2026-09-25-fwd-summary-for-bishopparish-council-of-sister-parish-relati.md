@@ -2,7 +2,8 @@
 title: "Fwd: Summary for Bishop/Parish Council of Sister Parish Relationship"
 date: 2026-09-25
 submission_id: 20260925_165411_Fwd_Summary_for_BishopParish_Council_of_Sister_Parish_Relati
-published_at: 2026-09-30T14:36:31.696893---
+published_at: 2026-09-30T14:36:31.696893
+---
 
 **PARISH UPDATE**
 

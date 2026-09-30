@@ -2,7 +2,8 @@
 title: "Fwd: Sister Parish First Meeting Reminder"
 date: 2026-09-25
 submission_id: 20260925_165411_Fwd_Sister_Parish_First_Meeting_Reminder
-published_at: 2026-09-30T14:38:47.773545---
+published_at: 2026-09-30T14:38:47.773545
+---
 
 **PARISH UPDATE**
 
