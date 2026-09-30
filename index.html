@@ -375,7 +375,7 @@ function parseUpdate(mdText) {
 
     let english = '', arabic = '', signature_en = '', signature_ar = '';
 
-    const arabicMarkers = ['العربي:', 'العربية:', 'ARABIC:', 'Arabic:', '**العربي:**', '**العربية:**', '**Arabic:**', '**عربي:**', 'عربي:', 'تحديث الكنيسة'];
+    const arabicMarkers = ['العربي:', 'العربية:', 'ARABIC:', 'Arabic:', '**العربي:**', '**العربية:**', '**Arabic:**', '**عربي:**', 'عربي:', '**تحديث الكنيسة**', 'تحديث الكنيسة'];
     let splitIdx = -1, markerLen = 0;
     for (const m of arabicMarkers) {
         const i = body.indexOf(m);
@@ -386,8 +386,13 @@ function parseUpdate(mdText) {
         let enPart = body.substring(0, splitIdx).trim();
         let arPart = body.substring(splitIdx + markerLen).trim();
 
-        enPart = enPart.replace(/^(?:\*?\*?PARISH UPDATE\*?\*?.*?\n)?(?:\*?\*?(?:ENGLISH|English)\*?\*?:?\n?)/i, '').trim();
+        // Clean up English part: strip header labels, bold wrappers, separators, trailing **
+        enPart = enPart.replace(/^(?:\*{0,2}PARISH UPDATE\*{0,2}[\s\n]*)?(?:\*{0,2}(?:ENGLISH|English)\*{0,2}:?[\s\n]*)?/i, '').trim();
         enPart = enPart.replace(/^---\s*$/gm, '').trim();
+        enPart = enPart.replace(/\*{1,2}\s*$/, '').trim();
+
+        // Clean up Arabic part: strip leading **, separators
+        arPart = arPart.replace(/^\*{1,2}\s*/, '').trim();
         arPart = arPart.replace(/^---\s*$/gm, '').trim();
 
         // Strip privacy/verification flags
