@@ -375,7 +375,7 @@ function parseUpdate(mdText) {
 
     let english = '', arabic = '', signature_en = '', signature_ar = '';
 
-    const arabicMarkers = ['العربي:', 'العربية:', 'ARABIC:', 'Arabic:'];
+    const arabicMarkers = ['العربي:', 'العربية:', 'ARABIC:', 'Arabic:', '**العربي:**', '**العربية:**', '**Arabic:**', '**عربي:**', 'عربي:', 'تحديث الكنيسة'];
     let splitIdx = -1, markerLen = 0;
     for (const m of arabicMarkers) {
         const i = body.indexOf(m);
@@ -386,7 +386,7 @@ function parseUpdate(mdText) {
         let enPart = body.substring(0, splitIdx).trim();
         let arPart = body.substring(splitIdx + markerLen).trim();
 
-        enPart = enPart.replace(/^(?:PARISH UPDATE.*?\n)?(?:ENGLISH:\n?)/i, '').trim();
+        enPart = enPart.replace(/^(?:\*?\*?PARISH UPDATE\*?\*?.*?\n)?(?:\*?\*?(?:ENGLISH|English)\*?\*?:?\n?)/i, '').trim();
         enPart = enPart.replace(/^---\s*$/gm, '').trim();
         arPart = arPart.replace(/^---\s*$/gm, '').trim();
 
